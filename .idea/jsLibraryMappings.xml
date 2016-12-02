@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavaScriptLibraryMappings">
-    <file url="file://$PROJECT_DIR$" libraries="{home-map/node_modules}" />
+    <file url="file://$PROJECT_DIR$" libraries="{home-map node_modules}" />
+    <file url="PROJECT" libraries="{b93998de12, bootstrap, jquery, jquery-ui, owl.carousel}" />
   </component>
 </project>

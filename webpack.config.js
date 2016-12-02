@@ -1,6 +1,8 @@
 var webpack = require('webpack');
 var path = require('path');
 var webpackMerge = require('webpack-merge');
+var AssetsPlugin = require('assets-webpack-plugin');
+var assetsPluginInstance = new AssetsPlugin();
 
 // Webpack Config
 var webpackConfig = {
@@ -22,6 +24,7 @@ var webpackConfig = {
         // your Angular Async Route paths relative to this root directory
       }
     ),
+    assetsPluginInstance
   ],
 
   module: {
@@ -36,7 +39,13 @@ var webpackConfig = {
         ]
       },
       { test: /\.css$/, loaders: ['to-string-loader', 'css-loader'] },
-      { test: /\.html$/, loader: 'raw-loader' }
+      { test: /\.html$/, loader: 'raw-loader' },
+      {test: /\.sass$/, exclude: /node_modules/, loaders: ['raw-loader', 'sass-loader']},
+      {
+        test: /\.(png|jpg|gif)$/,
+        loader:
+          "file-loader?name=assets/[name].[ext]&context=./src/"
+      },
     ]
   }
 

@@ -1,24 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ElementRef} from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import CustomValidators from '../forms/CustomValidators';
-
+declare var $: any;
 @Component({
   selector: 'map-page',
   templateUrl: './map-page.component.html',
-  styleUrls: ['./map-page.component.css']
+  styleUrls: ['./map-page.component.sass']
 })
 export class MapPageComponent implements OnInit {
-  contactForm: FormGroup;
-  constructor(private formBuilder: FormBuilder) {}
-
+  constructor(private _elRef: ElementRef){};
   ngOnInit() {
-    this.contactForm = this.formBuilder.group({
-      name: ['', Validators.required],
-      email: ['', [Validators.required, CustomValidators.validateEmail]],
-      content: ['', [Validators.required, Validators.minLength(10)]]
+
+    $( ".datepick" ).datepicker();
+    $(".profile-drop").click(function () {
+      $(".profile-menu").slideToggle("slow");
     });
-  }
-  submitForm(): void {
-    console.log(this.contactForm);
+
+    $(".mobile-drop").click(function () {
+      $(".mobile-menu").slideToggle("slow");
+    });
   }
 }

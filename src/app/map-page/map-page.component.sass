@@ -1,0 +1,239 @@
+
+
+
+
+*::-webkit-input-placeholder
+  color: #666
+  opacity: 1
+
+*:-moz-placeholder
+  color: #666
+  opacity: 1
+
+*::-moz-placeholder
+  color: #666
+  opacity: 1
+
+*:-ms-input-placeholder
+  color: #666
+  opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+  color: #666
+body input:required:valid,
+body textarea:required:valid
+  color: #666
+
+//Custom Styles Here
+body
+  font-family: 'Titillium Web', sans-serif!important
+.menu-wrapper
+  padding: 0!important
+.instant
+  padding: 8px 28px
+.menu
+  ul
+    margin: 0
+    padding: 0
+    border: 1px solid darkgrey
+
+    li
+      display: inline-block
+      padding: 10px 0
+      float: left
+      height: 42px
+      font-size: 18px
+      i
+        padding-left: 5px
+      &:first-child
+        width: 10%
+        font-family: 'Monoton', cursive
+        text-align: center
+      &:nth-child(2)
+        width: 70%
+        border-right: 1px solid darkgrey
+        border-left: 1px solid darkgrey
+        padding-left: 5px
+      &:nth-child(3)
+        width: 10%
+        border-right: 1px solid darkgrey
+        text-align: center
+        &:hover
+          background-color: #EDEFED
+          cursor: pointer
+      &:nth-child(4)
+        width: 10%
+        text-align: center
+        &:hover
+          background-color: #EDEFED
+          cursor: pointer
+      input
+        border: none
+        outline: none
+.wrapper
+  .search-info
+    overflow-y: scroll
+    overflow-x: hidden
+    max-height: 800px
+    .date
+      padding: 15px 10px
+      border-bottom: 1px solid gainsboro
+      .datespan
+        padding: 8px 0
+      input
+        width: 100%
+        display: block
+        padding: 16px 10px
+        border-radius: 5px
+        border: 1px solid darkgrey
+    .rooms
+      padding: 15px 10px
+      border-bottom: 1px solid gainsboro
+      .datespan
+        padding: 8px 0
+      label
+        padding-top: 9px
+        padding-bottom: 8px
+        display: table
+        border: 1px solid #dce0e0
+        background-color: #edefed
+        width: 100%
+        cursor: pointer
+        span
+          padding-left: 10px
+        div
+          &:first-child
+            width: 98%
+            display: table-cell
+            vertical-align: middle
+          &:nth-child(2)
+            width: 2%
+            display: table-cell
+            padding-right: 10px
+            input
+              height: 1.25em
+              width: 1.25em
+              outline: none
+    .price
+      padding: 15px 10px
+      border-bottom: 1px solid gainsboro
+      .chart
+        background-color: green
+        height: 50px
+      button
+        float: right
+.top-list
+  padding-top: 14px
+  padding-bottom: 10px
+  p
+    padding-top: 5px
+  span
+    &:first-child
+      button
+        background-color: transparent
+        outline: none
+        padding: 7px 21px
+        border: 1px solid gainsboro
+        font-size: 14px
+        font-weight: bold
+        border-radius: 4px
+
+    &:nth-child(2)
+      font-weight: bold
+.list
+  .photo
+    min-height: 200px !important
+    margin-bottom: 50px
+
+.map
+  padding: 0
+  min-height: 800px!important
+  position: absolute
+  left: 58.3%
+  top: 0
+  background-image: url("/assets/google-map.jpg")
+  background-size: cover
+  background-repeat: no-repeat
+
+.mobile-menu
+  display: none
+  ul
+    list-style: none
+    margin: 0
+    li
+      padding-top: 10px
+      padding-bottom: 10px
+      border-bottom: 1px solid darkgrey
+      font-family: "Titillium Web",sans-serif
+      font-weight: bold
+      -webkit-transition: all .4s ease-in-out
+      transition: all .4s ease-in-out
+      padding-left: 10px
+      &:hover
+        background-color: #EDEFED
+        cursor: pointer
+        i
+          color: #FC555E
+.mobile-drop
+  cursor: pointer!important
+.my-body
+  padding: 0!important
+.mobile-menu ul li i
+  padding-left: 10px
+  padding-right: 10px
+  -webkit-transition: all .3s ease-in-out
+  transition: all .3s ease-in-out
+
+.mobile-menu  .profile-menu li
+  padding-left: 50px!important
+
+.mobile-menu  .profile-menu
+  display: none
+@media only screen and (max-width: 992px)
+  .menu ul li:nth-child(1)
+    width: 15%
+  .menu ul li:nth-child(2)
+    width: 85%
+  .menu ul li:nth-child(3)
+    width: 15%
+  .menu ul li:nth-child(4)
+    width: 15%
+.menu ul li input
+  border: none
+  outline: none
+  box-shadow: none
+  width: 70%
+
+.owner
+  border-radius: 50%
+  height: 60px
+  width: 60px
+  display: inline-block
+  position: relative
+  overflow: hidden
+  border: 2px solid white
+  float: right
+  top: -70px
+  left: -17px
+  img
+    height: 60px
+    width: 60px
+.like
+  font-size: 35px
+  position: absolute
+  left: 82%
+  top: 2%
+  opacity: 0.6
+  &:hover
+    i
+      opacity: 1!important
+      color: black
+      cursor: pointer
+@media only screen and (max-width: 600px)
+  .price
+    button
+      float: none!important
+
+//ALWAYS END
+
