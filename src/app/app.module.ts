@@ -13,6 +13,7 @@ import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import {MapPageComponent} from "./map-page/map-page.component";
 import {DetailComponent} from "./detail/detail.component";
 import {FormComponent} from "./form/form.component";
+import {TranslateModule} from "ng2-translate";
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import {FormComponent} from "./form/form.component";
 
   ],
   imports: [
+    TranslateModule.forRoot(),
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
