@@ -222,18 +222,40 @@ body
 .like
   font-size: 35px
   position: absolute
-  left: 82%
-  top: 2%
+  top: 4%
   opacity: 0.6
+  float: right
+  left: 80%
   &:hover
     i
       opacity: 1!important
       color: black
       cursor: pointer
+.my-fluid
+  overflow-x: hidden!important
 @media only screen and (max-width: 600px)
   .price
     button
       float: none!important
-
+@media only screen and (max-width: 768px)
+  .map
+    position: relative
+    left: 0
+    width: 100%
+  .search-info
+    max-height: 100%!important
+    overflow: auto!important
+    width: 100%
+  .row
+    margin-left: -20px
+    margin-right: -20px
+  .my-fluid
+    overflow-x: auto
+    padding-right: 20px
+    padding-left: 20px
+@media only screen and (max-width: 400px)
+  .owner
+    top: -81px
+    left: 17px
 //ALWAYS END
 
