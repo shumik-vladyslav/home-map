@@ -5,11 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="332c89b3-faae-4b84-93b6-d185ea76454a" name="Default" comment="">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+=======
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/home_map_node_modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/home-map.iml" afterPath="$PROJECT_DIR$/.idea/home-map.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
+>>>>>>> 0f8a3885410a3dba37ca38735dc06fc2acd507ca
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/detail/detail.component.html" afterPath="$PROJECT_DIR$/src/app/detail/detail.component.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/detail/detail.component.sass" afterPath="$PROJECT_DIR$/src/app/detail/detail.component.sass" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/detail/detail.component.ts" afterPath="$PROJECT_DIR$/src/app/detail/detail.component.ts" />
+<<<<<<< HEAD
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/home/home.component.css" afterPath="$PROJECT_DIR$/src/app/home/home.component.css" />
+=======
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/map-page/map-page.component.html" afterPath="$PROJECT_DIR$/src/app/map-page/map-page.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/map-page/map-page.component.sass" afterPath="$PROJECT_DIR$/src/app/map-page/map-page.component.sass" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/detail/detail.component.css" afterPath="$PROJECT_DIR$/src/app/detail/detail.component.sass" />
+>>>>>>> 06cf9326cec326e9625d269f15689bf15f9923d0
+>>>>>>> 0f8a3885410a3dba37ca38735dc06fc2acd507ca
     </list>
     <ignored path="home-map.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,7 +47,57 @@
     <favorites_list name="home-map" />
   </component>
   <component name="FileEditorManager">
+<<<<<<< HEAD
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+=======
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="detail.component.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/app/detail/detail.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="81">
+              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="detail.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/detail/detail.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="408">
+              <caret line="24" column="52" selection-start-line="24" selection-start-column="52" selection-end-line="24" selection-end-column="52" />
+=======
+            <state relative-caret-position="189">
+              <caret line="7" column="28" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="28" />
+>>>>>>> 06cf9326cec326e9625d269f15689bf15f9923d0
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.routes.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/app.routes.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="detail.component.sass" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/detail/detail.component.sass">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+>>>>>>> 0f8a3885410a3dba37ca38735dc06fc2acd507ca
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -241,7 +307,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ng2angle" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
     <property name="editor.config.accepted" value="true" />
@@ -338,18 +404,41 @@
       <workItem from="1480605107291" duration="8962000" />
       <workItem from="1480674979409" duration="10594000" />
       <workItem from="1480686393823" duration="7679000" />
+<<<<<<< HEAD
+      <workItem from="1480710188237" duration="1553000" />
+=======
       <workItem from="1480710188237" duration="1344000" />
       <workItem from="1480767781605" duration="7571000" />
+<<<<<<< HEAD
       <workItem from="1480850056436" duration="13920000" />
+=======
+>>>>>>> 06cf9326cec326e9625d269f15689bf15f9923d0
+>>>>>>> 0f8a3885410a3dba37ca38735dc06fc2acd507ca
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="61809000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="false" />
+=======
+<<<<<<< HEAD
+    <option name="totallyTimeSpent" value="40527000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="false" />
+=======
+    <option name="totallyTimeSpent" value="47889000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+>>>>>>> 06cf9326cec326e9625d269f15689bf15f9923d0
+>>>>>>> 0f8a3885410a3dba37ca38735dc06fc2acd507ca
     <layout>
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946146" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18489583" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -358,7 +447,7 @@
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280757" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3280757" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -663,8 +752,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/home/home.component.css">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="510">
           <caret line="122" column="0" selection-start-line="122" selection-start-column="0" selection-end-line="123" selection-end-column="24" />
+=======
+<<<<<<< HEAD
+        <state relative-caret-position="408">
+          <caret line="24" column="52" selection-start-line="24" selection-start-column="52" selection-end-line="24" selection-end-column="52" />
+=======
+        <state relative-caret-position="81">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+>>>>>>> 06cf9326cec326e9625d269f15689bf15f9923d0
+>>>>>>> 0f8a3885410a3dba37ca38735dc06fc2acd507ca
           <folding />
         </state>
       </provider>
