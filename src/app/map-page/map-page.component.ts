@@ -2,7 +2,7 @@ import {Component, OnInit, ElementRef} from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import CustomValidators from '../forms/CustomValidators';
 declare var $: any;
-declare var google: any
+declare var google: any;
 @Component({
   selector: 'map-page',
   templateUrl: './map-page.component.html',
@@ -52,7 +52,7 @@ export class MapPageComponent implements OnInit {
 
   ngOnInit() {
 
-    $( ".datepick" ).datepicker();
+
     $(".profile-drop").click(function () {
       $(".profile-menu").slideToggle("slow");
     });
@@ -60,7 +60,6 @@ export class MapPageComponent implements OnInit {
     $(".mobile-drop").click(function () {
       $(".mobile-menu").slideToggle("slow");
     });
-
     let def = {
       center: {lat: 46.73540294257893, lng: -71.24165268144532},
       zoom: 8
@@ -76,13 +75,10 @@ export class MapPageComponent implements OnInit {
          position: item.position
        });
 
-       var contentString = `<div class="photo col-lg-12">
-                      <img src="${item.src}" alt="" class="img-responsive">
-                      <div class="cost"><span>${item.cost}/night</span></div>
+       var contentString = `<div class="photo col-lg-6" style="width: 350px!important;">
+                      <img src="${item.src}" alt="" class="img-responsive" style="max-width: 100%;height: 210px;!important;">
+                      <div class="cost" style="background-color: black;width: 30%;position: absolute;top: 62%;padding: 18px 5px;font-size: 18px;color: white;opacity: 0.8;font-weight: bold"><span>${item.cost}/night</span></div>
                       <div class="info"><span>${item.label}</span></div>
-                      <span class="owner">
-                          <img src="${item.owner}" alt="owner">
-                      </span>
                       <span class="like">
                         <i *ngIf="like" class="fa fa-heart" aria-hidden="true"></i>
                         <i *ngIf="!like" class="fa fa-heart" aria-hidden="true"></i>
