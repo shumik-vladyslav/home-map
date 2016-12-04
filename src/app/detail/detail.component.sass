@@ -1,0 +1,228 @@
+.photo-main
+  height: 700px
+  background-image: url("/assets/item1.jpg")
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: 50% 50%
+.container-fluid
+  padding: 0
+//MENU
+.menu-wrapper
+  padding: 0!important
+.menu
+  ul
+    margin: 0
+    padding: 0
+    border: 1px solid darkgrey
+
+    li
+      display: inline-block
+      padding: 10px 0
+      float: left
+      height: 42px
+      font-size: 18px
+      i
+        padding-left: 5px
+      &:first-child
+        width: 10%
+        font-family: 'Monoton', cursive
+        text-align: center
+      &:nth-child(2)
+        width: 70%
+        border-right: 1px solid darkgrey
+        border-left: 1px solid darkgrey
+        padding-left: 5px
+      &:nth-child(3)
+        width: 10%
+        border-right: 1px solid darkgrey
+        text-align: center
+        &:hover
+          background-color: #EDEFED
+          cursor: pointer
+      &:nth-child(4)
+        width: 10%
+        text-align: center
+        &:hover
+          background-color: #EDEFED
+          cursor: pointer
+      input
+        border: none
+        outline: none
+.mobile-menu
+  display: none
+  ul
+    list-style: none
+    margin: 0
+    li
+      padding-top: 10px
+      padding-bottom: 10px
+      border-bottom: 1px solid darkgrey
+      font-family: "Titillium Web",sans-serif
+      font-weight: bold
+      -webkit-transition: all .4s ease-in-out
+      transition: all .4s ease-in-out
+      padding-left: 10px
+      &:hover
+        background-color: #EDEFED
+        cursor: pointer
+        i
+          color: #FC555E
+.mobile-drop
+  cursor: pointer!important
+.my-body
+  padding: 0!important
+.mobile-menu ul li i
+  padding-left: 10px
+  padding-right: 10px
+  -webkit-transition: all .3s ease-in-out
+  transition: all .3s ease-in-out
+
+.mobile-menu  .profile-menu li
+  padding-left: 50px!important
+
+.mobile-menu  .profile-menu
+  display: none
+@media only screen and (max-width: 992px)
+  .menu ul li:nth-child(1)
+    width: 15%
+  .menu ul li:nth-child(2)
+    width: 85%
+  .menu ul li:nth-child(3)
+    width: 15%
+  .menu ul li:nth-child(4)
+    width: 15%
+.menu ul li input
+  border: none
+  outline: none
+  box-shadow: none
+  width: 70%
+.form
+  position: relative
+.form-fixed
+  overflow-y: hidden
+  position: absolute
+  right: 0
+  width: 400px
+  top: -40px
+.top-form
+    background-color: rgba(60,63,64,0.9)
+    border: 0
+    color: #fff
+    height: 40px
+    padding: 9px 31px
+    text-transform: capitalize
+    z-index: 1001
+    .col-lg-8
+      span
+        &:first-child
+          font-size: 18px
+          font-weight: bold
+
+.form-body
+  margin: 0
+  padding: 20px
+  min-height: 175px
+  border: 1px solid #dce0e0
+  .select-panel
+    margin-top: 20px
+  input
+    width: 100%
+    display: block
+    padding: 17px 6px
+  select
+    width: 100%
+
+    display: block
+    color: black
+  button
+    border-color: #ff5a5f
+    background-color: #ff5a5f
+    color: #fff
+    width: 100%
+    padding: 9px 27px
+    font-size: 16px
+    outline: none
+    -webkit-border-radius:
+    -moz-border-radius:
+    border-radius: 5px
+    margin-top: 20px
+  .text-bot
+    margin-top: 30px
+    margin-bottom: 20px
+.fix-form
+  overflow-y: hidden!important
+  position: fixed!important
+  right: initial!important
+  width: 400px!important
+  bottom: 115px!important
+  top: 0
+.owner
+  border-radius: 50%
+  height: 100px
+  width: 100px
+  display: inline-block
+  overflow: hidden
+  border: 2px solid white
+  img
+    height: 100px
+    width: 100px
+.owner-info
+  margin-top: 20px
+
+.form-fixed2
+  overflow-y: hidden
+  right: 0
+  width: 100%
+  top: -40px
+.top-form2
+  background-color: rgba(60,63,64,0.9)
+  border: 0
+  color: #fff
+  height: 40px
+  padding: 9px 31px
+  text-transform: capitalize
+  z-index: 1001
+  .col-lg-8
+    span
+      &:first-child
+        font-size: 18px
+        font-weight: bold
+
+.form-body2
+  margin: 0
+  padding: 20px
+  min-height: 175px
+  border: 1px solid #dce0e0
+  .select-panel
+    margin-top: 20px
+  input
+    width: 100%
+    display: block
+    padding: 17px 6px
+  select
+    width: 100%
+
+    display: block
+    color: black
+  button
+    border-color: #ff5a5f
+    background-color: #ff5a5f
+    color: #fff
+    width: 100%
+    padding: 9px 27px
+    font-size: 16px
+    outline: none
+    -webkit-border-radius:
+    -moz-border-radius:
+    border-radius: 5px
+    margin-top: 20px
+  .text-bot
+    margin-top: 30px
+    margin-bottom: 20px
+@media only screen and (max-width: 767px)
+  .row
+    margin-left: -15px
+  .top-form2
+    padding: 10px 20px !important
+  .photo-main
+    height: 300px

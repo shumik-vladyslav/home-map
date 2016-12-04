@@ -76,13 +76,13 @@ body {
 .mobile-menu ul{
   list-style: none;
   margin: 0;
-
+}
 .mobile-drop {
   cursor: pointer!important;
 }
 
 
-}
+
 .mobile-menu ul li {
   padding-top: 10px;
   padding-bottom: 10px;
