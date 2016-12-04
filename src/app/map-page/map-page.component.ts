@@ -2,6 +2,7 @@ import {Component, OnInit, ElementRef} from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import CustomValidators from '../forms/CustomValidators';
 declare var $: any;
+declare var google: any
 @Component({
   selector: 'map-page',
   templateUrl: './map-page.component.html',
@@ -9,6 +10,46 @@ declare var $: any;
 })
 export class MapPageComponent implements OnInit {
   constructor(private _elRef: ElementRef){};
+
+  map;
+
+  items = [{
+    cost: 1111,
+    label: "Entire home/ apt *2 beds *4 guests",
+    src: "assets/item1.jpg",
+    owner: "assets/owner.jpg",
+    like: false,
+    position: {lat: 46.83540294257893, lng: -71.24165268144532},
+    stars: [true,true,true,true,true]
+
+  },{
+    cost: 5000,
+    label: "Entire home",
+    src: "assets/item2.jpg",
+    owner: "assets/owner.jpg",
+    like: false,
+    position: {lat: 46.73540294257893, lng: -71.54165268144532},
+    stars: [true,true,true,true,true]
+
+  },{
+    cost: 10000,
+    label: "Entire home/ apt *1 beds *1 guests",
+    src: "assets/item3.jpg",
+    owner: "assets/owner.jpg",
+    like: true,
+    position: {lat: 46.73540294257893, lng: -71.94165268144532},
+    stars: [true,true,true,false,false]
+
+  },{
+    cost: 2000,
+    label: "Entire home/ apt *5 beds *4 guests",
+    src: "assets/item4.jpg",
+    owner: "assets/owner.jpg",
+    like: true,
+    position: {lat: 46.53540294257893, lng: -71.24165268144532},
+    stars: [true,true,true,true,false]
+  }];
+
   ngOnInit() {
 
     $( ".datepick" ).datepicker();
@@ -19,5 +60,47 @@ export class MapPageComponent implements OnInit {
     $(".mobile-drop").click(function () {
       $(".mobile-menu").slideToggle("slow");
     });
+
+    let def = {
+      center: {lat: 46.73540294257893, lng: -71.24165268144532},
+      zoom: 8
+    };
+    setTimeout( () =>{
+      this.map = new google.maps.Map(document.getElementById('googleMap'), def);
+
+     this.items.forEach((item) =>{
+       let marker = new google.maps.Marker({
+         map: this.map,
+         draggable: true,
+         animation: google.maps.Animation.DROP,
+         position: item.position
+       });
+
+       var contentString = `<div class="photo col-lg-12">
+                      <img src="${item.src}" alt="" class="img-responsive">
+                      <div class="cost"><span>${item.cost}/night</span></div>
+                      <div class="info"><span>${item.label}</span></div>
+                      <span class="owner">
+                          <img src="${item.owner}" alt="owner">
+                      </span>
+                      <span class="like">
+                        <i *ngIf="like" class="fa fa-heart" aria-hidden="true"></i>
+                        <i *ngIf="!like" class="fa fa-heart" aria-hidden="true"></i>
+                      </span>
+                    </div>`;
+
+       var infowindow = new google.maps.InfoWindow({
+         content: contentString
+       });
+
+       marker.addListener('click', function() {
+         infowindow.open(this.map, marker);
+       });
+     })
+
+    }, 1000);
+
+
+
   }
 }

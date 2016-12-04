@@ -14,6 +14,8 @@ import {MapPageComponent} from "./map-page/map-page.component";
 import {DetailComponent} from "./detail/detail.component";
 import {FormComponent} from "./form/form.component";
 import {TranslateModule} from "ng2-translate";
+import {HeaderComponent} from "./shared/header/header.component";
+import {FooterComponent} from "./shared/footer/footer.component";
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import {TranslateModule} from "ng2-translate";
     DetailComponent,
     HomeComponent,
     MapPageComponent,
-    FormComponent
+    FormComponent,
+    HeaderComponent,
+    FooterComponent
 
   ],
   imports: [
