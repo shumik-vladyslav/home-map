@@ -1,6 +1,8 @@
 import {Component, OnInit, ElementRef, Pipe} from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import CustomValidators from '../forms/CustomValidators';
+
+import {Router, ActivatedRoute} from "@angular/router";
 declare var $: any;
 declare var google: any;
 declare var noUiSlider: any;
@@ -10,13 +12,14 @@ declare var noUiSlider: any;
   styleUrls: ['./map-page.component.sass']
 })
 export class MapPageComponent implements OnInit {
-  constructor(private _elRef: ElementRef){};
+  constructor(private _elRef: ElementRef, private router: Router){};
 
   map;
 
   showLoad = true;
 
   items = [{
+    id: 1,
     cost: 1111,
     label: "Entire home/ apt *2 beds *4 guests",
     src: "assets/item1.jpg",
@@ -26,6 +29,7 @@ export class MapPageComponent implements OnInit {
     stars: [true,true,true,true,true]
 
   },{
+    id: 2,
     cost: 5000,
     label: "Entire home",
     src: "assets/item2.jpg",
@@ -35,6 +39,7 @@ export class MapPageComponent implements OnInit {
     stars: [true,true,true,true,true]
 
   },{
+    id: 3,
     cost: 10000,
     label: "Entire home/ apt *1 beds *1 guests",
     src: "assets/item3.jpg",
@@ -44,6 +49,7 @@ export class MapPageComponent implements OnInit {
     stars: [true,true,true,false,false]
 
   },{
+    id: 4,
     cost: 2000,
     label: "Entire home/ apt *5 beds *4 guests",
     src: "assets/item4.jpg",
@@ -56,6 +62,11 @@ export class MapPageComponent implements OnInit {
   min = 0;
 
   max = 10000;
+
+  click(item){
+    console.log(item)
+    this.router.navigate(['/detail/', {id: item.id}]);
+  }
 
   ngOnInit() {
 
@@ -108,7 +119,7 @@ export class MapPageComponent implements OnInit {
        });
 
        var contentString = `<div class="photo col-lg-6" style="width: 350px!important;">
-                      <img src="${item.src}" alt="" class="img-responsive" style="max-width: 100%;height: 210px;!important;">
+                      <a href='#/detail/${item.id}' src="${item.src}" alt="" class="img-responsive" style="background-image: url('${item.src}');max-width: 100%;height: 210px;!important;"></a>
                       <div class="cost" style="background-color: black;width: 30%;position: absolute;top: 62%;padding: 18px 5px;font-size: 18px;color: white;opacity: 0.8;font-weight: bold"><span>${item.cost}/night</span></div>
                       <div class="info"><span>${item.label}</span></div>
                       <span class="like">
