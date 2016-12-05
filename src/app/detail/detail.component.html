@@ -1,6 +1,6 @@
 <div class="container-fluid">
   <header></header>
-  <div class="photo-main col-lg-12">
+  <div [ngStyle]="{'background-image': 'url(' + item.src + ')'}" class="photo-main col-lg-12">
 
   </div>
 </div>
@@ -11,7 +11,7 @@
        <div class="col-lg-12 owner-info">
          <div class="row">
            <div class="col-lg-9 col-md-9 col-sm-8 col-xs-7">
-             <H1>West side in the Crozon Peninsula</H1>
+             <H1>{{item.label}}</H1>
              <p>Crozon, Bretagne, France·47 reviews</p>
            </div>
            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-5 photo-owner">
@@ -25,7 +25,7 @@
                <div class="top-form2">
                  <div class="row">
                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-7">
-                     <span>$5000</span>
+                     <span>${{item.cost}}</span>
                    </div>
                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-5 text-right">
                      <span>Per night</span>
@@ -49,9 +49,20 @@
                      <option value="3 guest">3 guest</option>
                      <option value="4 guest">4 guest</option>
                    </select>
-                   <button>
-                     Request to Book
-                   </button>
+                   <div class="row">
+                     <button (click)="myModal.open()">open my modal</button>
+                     <modal #myModal>
+                       <modal-header>
+                         <h1>Modal header</h1>
+                       </modal-header>
+                       <modal-content>
+                         Hello Modal!
+                       </modal-content>
+                       <modal-footer>
+                         <button class="btn btn-primary" (click)="myModal.close()">Request to Book</button>
+                       </modal-footer>
+                     </modal>
+                   </div>
                    <div class="text-bot">
                      <hr>
                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, optio.

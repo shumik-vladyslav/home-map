@@ -17,6 +17,9 @@ import {TranslateModule} from "ng2-translate";
 import {HeaderComponent} from "./shared/header/header.component";
 import {FooterComponent} from "./shared/footer/footer.component";
 import * as spinner from 'ng2-spin-kit/app/spinners';
+import {ChartComponent} from "./chart/chart.component";
+import { ChartModule } from 'angular2-highcharts';
+import {ModalModule} from "ng2-modal";
 
 @NgModule({
   declarations: [
@@ -27,6 +30,7 @@ import * as spinner from 'ng2-spin-kit/app/spinners';
     FormComponent,
     HeaderComponent,
     FooterComponent,
+    ChartComponent,
     MinPipe,
     MaxPipe,
     spinner.RotatingPlaneComponent,
@@ -48,6 +52,8 @@ import * as spinner from 'ng2-spin-kit/app/spinners';
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
+    ChartModule,
+    ModalModule,
     RouterModule.forRoot(rootRouterConfig, { useHash: true })
   ],
   providers: [
