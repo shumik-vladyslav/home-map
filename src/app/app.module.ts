@@ -19,6 +19,7 @@ import {FooterComponent} from "./shared/footer/footer.component";
 import * as spinner from 'ng2-spin-kit/app/spinners';
 import {ChartComponent} from "./chart/chart.component";
 import { ChartModule } from 'angular2-highcharts';
+import {ModalModule} from "ng2-modal";
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { ChartModule } from 'angular2-highcharts';
     ReactiveFormsModule,
     HttpModule,
     ChartModule,
+    ModalModule,
     RouterModule.forRoot(rootRouterConfig, { useHash: true })
   ],
   providers: [
