@@ -1,5 +1,7 @@
+<sk-folding-cube *ngIf="showLoad" style="position: fixed;top: 50%;left: 50%;"></sk-folding-cube>
 
-<main>
+<main [hidden]="showLoad">
+
   <div class="lang-bar">
     <a (click)="changeLang('en')">EN</a>
     <a (click)="changeLang('hy')">ՀՅ</a>

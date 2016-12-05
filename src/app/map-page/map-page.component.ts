@@ -14,6 +14,8 @@ export class MapPageComponent implements OnInit {
 
   map;
 
+  showLoad = true;
+
   items = [{
     cost: 1111,
     label: "Entire home/ apt *2 beds *4 guests",
@@ -68,7 +70,7 @@ export class MapPageComponent implements OnInit {
 
     var slider = document.getElementById('slider');
 
-
+    setTimeout(() => this.showLoad = false, 2000);
 
 
 
@@ -124,7 +126,7 @@ export class MapPageComponent implements OnInit {
        });
      })
 
-    }, 1000);
+    }, 3000);
 
 
 

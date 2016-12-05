@@ -16,6 +16,7 @@ import {FormComponent} from "./form/form.component";
 import {TranslateModule} from "ng2-translate";
 import {HeaderComponent} from "./shared/header/header.component";
 import {FooterComponent} from "./shared/footer/footer.component";
+import * as spinner from 'ng2-spin-kit/app/spinners';
 
 @NgModule({
   declarations: [
@@ -27,8 +28,19 @@ import {FooterComponent} from "./shared/footer/footer.component";
     HeaderComponent,
     FooterComponent,
     MinPipe,
-    MaxPipe
-
+    MaxPipe,
+    spinner.RotatingPlaneComponent,
+    spinner.DoubleBounceComponent,
+    spinner.WaveComponent,
+    spinner.WanderingCubesComponent,
+    spinner.PulseComponent,
+    spinner.ChasingDotsComponent,
+    spinner.CircleComponent,
+    spinner.ThreeBounceComponent,
+    spinner.CubeGridComponent,
+    spinner.WordPressComponent,
+    spinner.FadingCircleComponent,
+    spinner.FoldingCubeComponent
   ],
   imports: [
     TranslateModule.forRoot(),

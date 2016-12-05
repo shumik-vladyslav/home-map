@@ -8,7 +8,9 @@ declare var $: any;
 
 export class HomeComponent implements OnInit{
   constructor(private _elRef: ElementRef){};
+  showLoad = true;
   ngOnInit() {
+    setTimeout(() => this.showLoad = false, 8000);
 
     $("#datepicker").datepicker();
 
