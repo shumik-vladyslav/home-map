@@ -5,7 +5,8 @@ declare var $: any;
 @Component({
   selector: 'detail',
   styleUrls: ['./detail.component.sass'],
-  templateUrl: './detail.component.html'
+  templateUrl: './detail.component.html',
+
 })
 export class DetailComponent implements OnInit {
   items = [{
@@ -60,8 +61,11 @@ export class DetailComponent implements OnInit {
     );
   };
   ngOnInit() {
-
     $( ".datepick" ).datepicker();
+    setInterval(()=>{
+      $( ".datepick" ).datepicker();
+    },1000);
+
     $(".profile-drop").click(function () {
       $(".profile-menu").slideToggle("slow");
     });

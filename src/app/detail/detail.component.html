@@ -1,3 +1,4 @@
+
 <div class="container-fluid">
   <header></header>
   <div [ngStyle]="{'background-image': 'url(' + item.src + ')'}" class="photo-main col-lg-12">
@@ -50,18 +51,7 @@
                      <option value="4 guest">4 guest</option>
                    </select>
                    <div class="row">
-                     <button (click)="myModal.open()">open my modal</button>
-                     <modal #myModal>
-                       <modal-header>
-                         <h1>Modal header</h1>
-                       </modal-header>
-                       <modal-content>
-                         Hello Modal!
-                       </modal-content>
-                       <modal-footer>
-                         <button class="btn btn-primary" (click)="myModal.close()">Request to Book</button>
-                       </modal-footer>
-                     </modal>
+                     <button (click)="myModal.open()">Request to Book</button>
                    </div>
                    <div class="text-bot">
                      <hr>
@@ -127,7 +117,7 @@
               <option value="3 guest">3 guest</option>
               <option value="4 guest">4 guest</option>
             </select>
-            <button>
+            <button (click)="myModal.open()">
               Request to Book
             </button>
             <div class="text-bot">
@@ -140,3 +130,31 @@
     </div>
   </div>
 </div>
+
+  <modal  #myModal >
+    <modal-header>
+    <span class="owner" style="display: block">
+    <img [src]="item.owner" alt="owner">
+    </span>
+    <span style="display: block">Name Surname</span>
+      <hr>
+      <span>When are you traveling?</span>
+    </modal-header>
+    <modal-content>
+      <input  type="text" class="datepick" placeholder="Check in"><input type="text" class="datepick" placeholder="Check out">
+      <input type="number">
+      <!--<select name="" id="">-->
+        <!--<option value="1guest">1 Guest</option>-->
+        <!--<option value="2guest">2 Guest</option>-->
+        <!--<option value="3guest">3 Guest</option>-->
+      <!--</select>-->
+      <div class="text-area">
+        <span class="in-msg">Message from my friend</span>
+        <span class="out-msg">Message to my friend</span>
+      </div>
+    </modal-content>
+    <modal-footer>
+      <input type="text"><i  (click)="myModal.close()"class="fa fa-paper-plane-o" aria-hidden="true"></i>
+    </modal-footer>
+  </modal>
+
