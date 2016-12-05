@@ -112,8 +112,8 @@
                 <div class="col-lg-2 datespan"style="padding: 8px 0;">
                   <span>Price Range</span>
                 </div>
-                <div class="col-lg-9 chart">
-                  <h2>chart</h2>
+                <div class="col-lg-9">
+                  <div id="slider"></div>
                 </div>
             </div>
             <div class="col-lg-12 price">
@@ -133,7 +133,7 @@
               </div>
               <div class="col-lg-12 list">
                 <div class="row">
-                  <div *ngFor="let item of items" class="col-lg-6">
+                  <div *ngFor="let item of items | MinPipe: min | MaxPipe: max" class="col-lg-6">
                     <div class="photo col-lg-12">
                       <img [src]="item.src" alt="" class="img-responsive" style="height: 292px!important;">
                       <div class="cost"><span>${{item.cost}}/night</span></div>

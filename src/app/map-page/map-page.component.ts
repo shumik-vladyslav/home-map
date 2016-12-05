@@ -1,8 +1,9 @@
-import {Component, OnInit, ElementRef} from '@angular/core';
+import {Component, OnInit, ElementRef, Pipe} from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import CustomValidators from '../forms/CustomValidators';
 declare var $: any;
 declare var google: any;
+declare var noUiSlider: any;
 @Component({
   selector: 'map-page',
   templateUrl: './map-page.component.html',
@@ -50,6 +51,10 @@ export class MapPageComponent implements OnInit {
     stars: [true,true,true,true,false]
   }];
 
+  min = 0;
+
+  max = 10000;
+
   ngOnInit() {
 
 
@@ -60,6 +65,31 @@ export class MapPageComponent implements OnInit {
     $(".mobile-drop").click(function () {
       $(".mobile-menu").slideToggle("slow");
     });
+
+    var slider = document.getElementById('slider');
+
+
+
+
+
+    noUiSlider.create(slider, {
+      start: [this.min, this.max],
+      connect: true,
+      range: {
+        'min': this.min,
+        'max': this.max
+      }
+    });
+
+    (slider as any).noUiSlider.on('set', () => {
+      console.log(document.getElementById('l-set'), (slider as any).noUiSlider.get(), 'tShow', 450);
+      let arr = (slider as any).noUiSlider.get();
+      this.min = arr[0];
+      this.max = arr[1];
+    });
+
+  //
+
     let def = {
       center: {lat: 46.73540294257893, lng: -71.24165268144532},
       zoom: 8
@@ -99,4 +129,36 @@ export class MapPageComponent implements OnInit {
 
 
   }
+}
+
+
+// Tell Angular2 we're creating a Pipe with TypeScript decorators
+@Pipe({
+  name: 'MinPipe'
+})
+export class MinPipe {
+
+  // Transform is the new "return function(value, args)" in Angular 1.x
+  transform(value, args?) {
+    return value.filter(person => {
+      return person.cost >= +args;
+    });
+  }
+
+}
+
+
+// Tell Angular2 we're creating a Pipe with TypeScript decorators
+@Pipe({
+  name: 'MaxPipe'
+})
+export class MaxPipe {
+
+  // Transform is the new "return function(value, args)" in Angular 1.x
+  transform(value, args?) {
+    return value.filter(person => {
+      return person.cost <= +args;
+    });
+  }
+
 }

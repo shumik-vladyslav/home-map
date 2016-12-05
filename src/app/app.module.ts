@@ -10,7 +10,7 @@ import { HttpModule } from '@angular/http';
 import { HomeComponent } from './home/home.component';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 
-import {MapPageComponent} from "./map-page/map-page.component";
+import {MapPageComponent, MinPipe, MaxPipe} from "./map-page/map-page.component";
 import {DetailComponent} from "./detail/detail.component";
 import {FormComponent} from "./form/form.component";
 import {TranslateModule} from "ng2-translate";
@@ -25,7 +25,9 @@ import {FooterComponent} from "./shared/footer/footer.component";
     MapPageComponent,
     FormComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    MinPipe,
+    MaxPipe
 
   ],
   imports: [
