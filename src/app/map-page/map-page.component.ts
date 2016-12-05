@@ -119,13 +119,17 @@ export class MapPageComponent implements OnInit {
        });
 
        var contentString = `<div class="photo col-lg-6" style="width: 350px!important;">
-                      <a href='#/detail/${item.id}' src="${item.src}" alt="" class="img-responsive" style="background-image: url('${item.src}');max-width: 100%;height: 210px;!important;"></a>
-                      <div class="cost" style="background-color: black;width: 30%;position: absolute;top: 62%;padding: 18px 5px;font-size: 18px;color: white;opacity: 0.8;font-weight: bold"><span>${item.cost}/night</span></div>
-                      <div class="info"><span>${item.label}</span></div>
-                      <span class="like">
-                        <i *ngIf="like" class="fa fa-heart" aria-hidden="true"></i>
-                        <i *ngIf="!like" class="fa fa-heart" aria-hidden="true"></i>
+                      <a href='#/detail/${item.id}' src="${item.src}" alt="" class="img-responsive" style="background-image: url('${item.src}');max-width: 100%;height: 210px;!important;background-repeat: no-repeat;background-size: cover;opacity: 0.8"></a>
+                      <div class="cost" style="background-color: black;width: 30%;position: absolute;top: 55.6%;padding: 18px 5px;font-size: 18px;color: white;opacity: 0.8;font-weight: bold"><span>${item.cost}/night</span></div>
+                      <span>
+                        <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
                       </span>
+                      <div class="info"><span>${item.label}</span></div>
+                      <span class="like" style="    position: relative;top: -240px;left: 275px;font-size: 25px;">
+                        <i *ngIf="like" class="fa fa-heart" aria-hidden="true"></i>
+                     
+                      </span>
+
                     </div>`;
 
        var infowindow = new google.maps.InfoWindow({

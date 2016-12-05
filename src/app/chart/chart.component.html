@@ -1,5 +1,28 @@
-<div>
-  <chart [options]="options"></chart>
-  <chart [options]="pipe"></chart>
-  <chart [options]="bar"></chart>
+<header class="clearfix"></header>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 header-form">
+      <span>Charts</span>
+    </div>
+    <div class="col-lg-8 col-lg-offset-2 form">
+      <div class="row fix-row">
+        <div>
+          <div class="chart">
+            <chart [options]="options"></chart>
+          </div>
+          <div class="chart">
+            <chart [options]="pipe"></chart>
+          </div>
+          <div class="chart">
+            <chart [options]="bar"></chart>
+          </div>
+
+
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="container-fluid" style="padding: 0">
+  <footer></footer>
 </div>
