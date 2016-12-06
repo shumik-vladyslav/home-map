@@ -1,4 +1,9 @@
 <header class="clearfix"></header>
+<style>
+  .file-over { border: dotted 3px red;
+    width: 100px;
+    height: 100px; } /* Default class applied to drop zones on over */
+</style>
 <div class="container-fluid sub-menu-container clearfix">
   <div class="container">
     <div class="col-lg-12 sub-menu">
@@ -25,7 +30,26 @@
                 Photo Upload
               </div>
               <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
-                <input type="file">
+                <!-- app.component.html -->
+                <input type="file"
+                       ngFileSelect
+                       [options]="options"
+                       (onUpload)="handleUpload($event)"
+                       (beforeUpload)="beforeUpload($event)">
+
+                <!-- drag & drop file example-->
+                <style>
+                  .file-over { border: dotted 3px red; } /* Default class applied to drop zones on over */
+                </style>
+                <div style="    width: 100px; height: 100px;
+    background: #777;"
+                  ngFileDrop
+                     [options]="options"
+                     (onUpload)="handleUpload($event)"
+                     [ngClass]="{'file-over': hasBaseDropZoneOver}"
+                     (onFileOver)="fileOverBase($event)"
+                     (beforeUpload)="beforeUpload($event)">
+                </div>
               </div>
             </div>
         </div>
@@ -35,7 +59,7 @@
               <span>Password Input</span>
             </div>
             <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
-              <input type="password" class="form-input">
+              <input [(ngModel)]="password" type="password" class="form-input">
             </div>
           </div>
         </div>
@@ -91,7 +115,9 @@
           </div>
         </div>
       </div>
-      <span class="save">Save</span>
+      <button *ngIf="password" class="save" disabled="disabled" type="submit" >Save</button>
+      <button *ngIf="!password" class="save-disalbe" disabled="disabled" type="submit" >Save</button>
+
     </div>
   </div>
 </div>

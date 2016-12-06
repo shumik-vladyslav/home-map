@@ -20,6 +20,7 @@ import * as spinner from 'ng2-spin-kit/app/spinners';
 import {ChartComponent} from "./chart/chart.component";
 import { ChartModule } from 'angular2-highcharts';
 import {ModalModule} from "ng2-modal";
+import { Ng2UploaderModule } from 'ng2-uploader';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import {ModalModule} from "ng2-modal";
     HttpModule,
     ChartModule,
     ModalModule,
-    RouterModule.forRoot(rootRouterConfig, { useHash: true })
+    RouterModule.forRoot(rootRouterConfig, { useHash: true }),
+    Ng2UploaderModule
   ],
   providers: [
     // GithubService
