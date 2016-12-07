@@ -79,6 +79,8 @@ export class MapPageComponent implements OnInit {
       $(".mobile-menu").slideToggle("slow");
     });
 
+    $( ".datepick" ).datepicker();
+
     var slider = document.getElementById('slider');
 
     setTimeout(() => this.showLoad = false, 2000);
