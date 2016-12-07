@@ -192,7 +192,7 @@ export class MapPageComponent implements OnInit {
        };
 
        let overlay = new CustomMarker(
-         new google.maps.LatLng(def.center.lat,def.center.lng),
+         new google.maps.LatLng(item.position.lat,item.position.lng),
          this.map,
          {
            marker_id: '123'
