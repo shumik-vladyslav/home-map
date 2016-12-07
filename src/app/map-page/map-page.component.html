@@ -108,13 +108,8 @@
               <div class="col-lg-12 list">
                 <div class="row">
                   <div *ngFor="let item of items | MinPipe: min | MaxPipe: max" class="col-lg-6">
-<<<<<<< HEAD
-                    <div class="photo col-lg-12" (click)="click(item)">
-                      <img [src]="item.src" alt="" class="img-responsive" >
-=======
                     <div class="photo col-lg-12">
-                      <img  (click)="click(item)" [src]="item.src" alt="" class="img-responsive" style="height: 292px!important;">
->>>>>>> 56ee0b03158c858b2fe075309689ca47fc8dca42
+                      <img  (click)="click(item)" [src]="item.src" alt="" class="img-responsive">
                       <div class="cost"><span>${{item.cost}}/night</span></div>
                       <div class="info"><span>{{item.label}}</span></div>
                       <span class="owner">
