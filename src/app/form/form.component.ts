@@ -25,10 +25,13 @@ export class FormComponent implements OnInit {
   sizeLimit = 2000000;
 
   handleUpload(data): void {
-    if (data && data.response) {
-      data = JSON.parse(data.response);
-      this.uploadFile = data;
-    }
+    console.log(data)
+    this.uploadFile = data.originalName;
+
+    // if (data && data.response) {
+    //   data = JSON.parse(data.response);
+    //   this.uploadFile = data;
+    // }
   }
 
   fileOverBase(e:any):void {

@@ -50,6 +50,9 @@
                      (onFileOver)="fileOverBase($event)"
                      (beforeUpload)="beforeUpload($event)">
                 </div>
+                <div>
+                  Response: {{ uploadFile | json }}
+                </div>
               </div>
             </div>
         </div>
