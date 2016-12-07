@@ -113,41 +113,131 @@ export class MapPageComponent implements OnInit {
       this.map = new google.maps.Map(document.getElementById('googleMap'), def);
 
      this.items.forEach((item) =>{
-       let marker = new google.maps.Marker({
-         map: this.map,
-         draggable: true,
-         animation: google.maps.Animation.DROP,
-         position: item.position
-       });
 
-       var contentString = `<div class="photo col-lg-6" style="width: 350px!important;">
-                      <a href='#/detail/${item.id}' src="${item.src}" alt="" class="img-responsive" style="background-image: url('${item.src}');max-width: 100%;height: 210px;!important;background-repeat: no-repeat;background-size: cover;opacity: 0.8"></a>
-                      <div class="cost" style="background-color: black;width: 30%;position: absolute;top: 55.6%;padding: 18px 5px;font-size: 18px;color: white;opacity: 0.8;font-weight: bold"><span>${item.cost}/night</span></div>
-                      <span>
-                        <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
-                      </span>
-                      <div class="info"><span>${item.label}</span></div>
-                      <span class="like" style="    position: relative;top: -240px;left: 275px;font-size: 25px;">
-                        <i *ngIf="like" class="fa fa-heart" aria-hidden="true"></i>
-                     
-                      </span>
 
-                    </div>`;
+       function CustomMarker(latlng, map, args) {
+         this.latlng = latlng;
+         this.args = args;
+         this.setMap(map);
+       }
 
-       var infowindow = new google.maps.InfoWindow({
-         content: contentString
-       });
+       CustomMarker.prototype = new google.maps.OverlayView();
 
-       marker.addListener('click', function() {
-         infowindow.open(this.map, marker);
-       });
-     })
+       CustomMarker.prototype.draw = function() {
+
+         var self = this;
+
+         var div = this.div;
+
+         if (!div) {
+
+           div = this.div = document.createElement('div');
+
+           div.className = 'marker';
+
+           div.style.position = 'absolute';
+           div.style.cursor = 'pointer';
+           div.style.width = '20px';
+           div.style.height = '20px';
+           div.style.background = 'blue';
+           div.innerHTML = '<p >23</p>'
+
+           if (typeof(self.args.marker_id) !== 'undefined') {
+             div.dataset.marker_id = self.args.marker_id;
+           }
+
+             var contentString = `<div class="photo col-lg-6" style="width: 350px!important;">
+                            <a href='#/detail/${item.id}' src="${item.src}" alt="" class="img-responsive" style="background-image: url('${item.src}');max-width: 100%;height: 210px;!important;background-repeat: no-repeat;background-size: cover;opacity: 0.8"></a>
+                            <div class="cost" style="background-color: black;width: 30%;position: absolute;top: 55.6%;padding: 18px 5px;font-size: 18px;color: white;opacity: 0.8;font-weight: bold"><span>${item.cost}/night</span></div>
+                            <span>
+                              <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
+                            </span>
+                            <div class="info"><span>${item.label}</span></div>
+                            <span class="like" style="    position: relative;top: -240px;left: 275px;font-size: 25px;">
+                              <i *ngIf="like" class="fa fa-heart" aria-hidden="true"></i>
+
+                            </span>
+
+                          </div>`;
+
+           var infowindow = new google.maps.InfoWindow({
+             content: contentString
+           });
+
+           google.maps.event.addDomListener(div, "click", function(event) {
+             infowindow.open(this.map, overlay);
+           });
+
+           var panes = this.getPanes();
+           panes.overlayImage.appendChild(div);
+         }
+
+         var point = this.getProjection().fromLatLngToDivPixel(this.latlng);
+
+         if (point) {
+           div.style.left = (point.x - 10) + 'px';
+           div.style.top = (point.y - 20) + 'px';
+         }
+       };
+
+       CustomMarker.prototype.remove = function() {
+         if (this.div) {
+           this.div.parentNode.removeChild(this.div);
+           this.div = null;
+         }
+       };
+
+       CustomMarker.prototype.getPosition = function() {
+         return this.latlng;
+       };
+
+       let overlay = new CustomMarker(
+         new google.maps.LatLng(def.center.lat,def.center.lng),
+         this.map,
+         {
+           marker_id: '123'
+         }
+       );
+     //   let marker = new google.maps.Marker({
+     //     map: this.map,
+     //     draggable: true,
+     //     animation: google.maps.Animation.DROP,
+     //     position: item.position
+     //   });
+     //
+     //   var contentString = `<div class="photo col-lg-6" style="width: 350px!important;">
+     //                  <a href='#/detail/${item.id}' src="${item.src}" alt="" class="img-responsive" style="background-image: url('${item.src}');max-width: 100%;height: 210px;!important;background-repeat: no-repeat;background-size: cover;opacity: 0.8"></a>
+     //                  <div class="cost" style="background-color: black;width: 30%;position: absolute;top: 55.6%;padding: 18px 5px;font-size: 18px;color: white;opacity: 0.8;font-weight: bold"><span>${item.cost}/night</span></div>
+     //                  <span>
+     //                    <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
+     //                  </span>
+     //                  <div class="info"><span>${item.label}</span></div>
+     //                  <span class="like" style="    position: relative;top: -240px;left: 275px;font-size: 25px;">
+     //                    <i *ngIf="like" class="fa fa-heart" aria-hidden="true"></i>
+     //
+     //                  </span>
+     //
+     //                </div>`;
+     //
+     //   var infowindow = new google.maps.InfoWindow({
+     //     content: contentString
+     //   });
+     //
+     //   marker.addListener('click', function() {
+     //     infowindow.open(this.map, marker);
+     //   });
+      })
+
+
+
 
     }, 3000);
 
-
-
   }
+
+
+
+
 }
 
 
