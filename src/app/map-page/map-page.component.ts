@@ -134,14 +134,16 @@ export class MapPageComponent implements OnInit {
            div = this.div = document.createElement('div');
 
            div.className = 'marker';
-
+           // div.style.border = '20px solid transparent';
+           // div.style.borderTop = '20px solid green';
+           div.style.borderRadius= '5px';
+           div.style.textAlign ='center';
            div.style.position = 'absolute';
            div.style.cursor = 'pointer';
-           div.style.width = '20px';
-           div.style.height = '20px';
-           div.style.background = 'blue';
-           div.innerHTML = '<p >23</p>'
-
+           div.style.width = '60px';
+           div.style.height = '30px';
+           div.style.background = '#FF5A5F';
+           div.innerHTML = '<p style="color: white;font-weight: bold;padding-top: 6px" >23</p><div style="border: 10px solid transparent;border-top: 10px solid #FF5A5F;position: absolute;top: 30px;left: 19px;"></div>';
            if (typeof(self.args.marker_id) !== 'undefined') {
              div.dataset.marker_id = self.args.marker_id;
            }
