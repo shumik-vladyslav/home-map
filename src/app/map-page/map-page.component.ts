@@ -143,7 +143,7 @@ export class MapPageComponent implements OnInit {
            div.style.width = '60px';
            div.style.height = '30px';
            div.style.background = '#FF5A5F';
-           div.innerHTML = '<p style="color: white;font-weight: bold;padding-top: 6px" >23</p><div style="border: 10px solid transparent;border-top: 10px solid #FF5A5F;position: absolute;top: 30px;left: 19px;"></div>';
+           div.innerHTML = '<p style="color: white;font-weight: bold;padding-top: 6px" >$'+ item.cost +'</p><div style="border: 10px solid transparent;border-top: 10px solid #FF5A5F;position: absolute;top: 30px;left: 19px;"></div>';
            if (typeof(self.args.marker_id) !== 'undefined') {
              div.dataset.marker_id = self.args.marker_id;
            }
@@ -194,7 +194,7 @@ export class MapPageComponent implements OnInit {
        };
 
        let overlay = new CustomMarker(
-         new google.maps.LatLng(def.center.lat,def.center.lng),
+         new google.maps.LatLng(item.position.lat,item.position.lng),
          this.map,
          {
            marker_id: '123'
